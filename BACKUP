@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine (please)</title>
+    <link rel="icon" type="image/x-icon" href="/valentine-website/Images/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #ffd1dc;
+        }
+
+        #valentine-form {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="valentine-form">
+        <h2>Will you be my Valentine Morgan? (say yes or else) (please)</h2>
+        <form>
+            <img src="/valentine-website/Images/cat.gif" alt="Valentine Image" style="max-width: 150%; border-radius: 10px;">
+            <label for="answer">Your Answer:</label>
+            <input type="text" id="answer" name="answer" placeholder="Say 'yes' (do it now)" required>
+            <br><br>
+            <button type="button" onclick="checkAnswer()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById('answer').value.toLowerCase();
+            
+            if (answer === 'yes') {
+                alert('I love you Morgan! Now you have to hold my hand ❤️ I miss you');
+            } else {
+                alert('I will remember this.');
+            }
+        }
+    </script>
+
+</body>
+</html>
