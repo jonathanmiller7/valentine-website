@@ -55,19 +55,6 @@
             background-color: #45a049;
         }
 
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #ffcc00;
-            transform-origin: 50% 50%;
-            animation: confettiAnimation 0.5s ease-out;
-        }
-
-        @keyframes confettiAnimation {
-            transform: translate(0, 100vh) rotate(360deg);
-        }
-
     </style>
 </head>
 <body>
@@ -81,7 +68,6 @@
             <input type="text" id="answer" name="answer" placeholder="Say 'yes' (do it now)" required>
             <br><br>
             <button type="button" onclick="checkAnswer()">Submit</button>
-            <div id="confetti-container"></div>
         </form>
     </div>
 
@@ -91,25 +77,10 @@
             
             if (answer === 'yes') {
                 alert('I love you Morgan! Now you have to hold my hand ❤️ I miss you');
-                generateConfetti();
             } else {
                 alert('I will remember this.');
             }
         }
-
-    }
-
-function generateConfetti() {
-    var confettiContainer = document.getElementById('confetti-container');
-    
-    for (var i = 0; i < 50; i++) {
-        var confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.animationDuration = Math.random() * 2 + 1 + 's';
-        confettiContainer.appendChild(confetti);
-    }
-}
     </script>
 
 </body>
