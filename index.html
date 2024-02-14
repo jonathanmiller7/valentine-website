@@ -10,7 +10,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 50px;
+            margin: 20px;
             background-color: #ffd1dc;
         }
 
@@ -19,6 +19,40 @@
             padding: 20px;
             border: 1px solid #000000;
             border-radius: 10px;
+            max-width: 80%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -27,7 +61,7 @@
     <div id="valentine-form">
         <h2>Will you be my Valentine Morgan? (say yes or else) (please)</h2>
         <form>
-            <img src="/valentine-website/Images/cat.gif" alt="Valentine Image" style="max-width: 150%; border-radius: 10px;">
+            <img src="/valentine-website/Images/cat.gif" alt="Valentine Image">
             <label for="answer">Your Answer:</label>
             <input type="text" id="answer" name="answer" placeholder="Say 'yes' (do it now)" required>
             <br><br>
